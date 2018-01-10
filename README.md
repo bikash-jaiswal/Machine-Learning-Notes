@@ -7,7 +7,7 @@
     3.   Learning Model and Cost Functions.
     4.   Linear Regression with one variable
     5.   Python Tutorial and implementation of Linear Regression
-2. Linear Regression with Multiple variables  
+2. [Linear Regression with Multiple variables](https://github.com/bjjaiswal/Machine-Learning-Notes/blob/master/2.Linear-Regression-with-Multiple-Variables.md)  
 3. Logistic Regession in classification
       1. Classification and Representations
       2. Logistic Regession Model
