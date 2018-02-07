@@ -1,0 +1,44 @@
+## Neural Network
+
+So why do we need yet another learning algorithm? We already have linear regression and we have logistic regression, so why do we need, you know, neural networks?
+
+In order to motivate the discussion of neural networks, let me start by showing you a few examples of machine learning problems where we need to learn complex non-linear hypotheses.
+
+Consider a supervised learning classification problem where you have a training set like this. If you want to apply logistic regression to this problem, one thing you could do is apply logistic regression with a lot of nonlinear features like that. So here, g as usual is the sigmoid function, and we can include lots of polynomial terms like these.And, if you include enough polynomial terms then, you know, maybeyou can get a hypotheses that separates the positive and negative examples.
+
+This particular method works well when you have only, say, two features - x1 and x2 - because you can then include all those polynomial terms of x1 and x2. But for many interesting machine learning problems would have a lot more features than just two.
+
+we certainly cannot fit a more complex data set as shown in figure because when higher polynomial features will dramatically blows up our features space and need to build many classifiers when features are large.
+![nn-intuition](pics/nn/nn-intuition.png)
+
+simple logistic regression together with adding in maybe the quadratic or the cubic features - that's just not a good way to learn complex nonlinear hypotheses when n is large because you just end up with too many features.
+
+![nn-intuition](pics/nn/nn-intuition2.png)
+
+if we were to try to learn a nonlinear hypothesis by including all the quadratic features, that is all the terms of the form, you know, Xi*Xj, while with the 2500 pixels we would end up with a total of three million features. And that's just too large to be reasonable; the computation would be very expensive to find and to represent all of these three million features per training example.
+
+## How to represent model or Hypothesis of Neural Network.
+Let's examine how we will represent a hypothesis function using neural networks. At a very simple level, neurons are basically computational units that take inputs (dendrites) as electrical inputs (called "spikes") that are channeled to outputs (axons). In our model, our dendrites are like the input features x<sub>1</sub>⋯x<sub>n</sub>, and the output is the result of our hypothesis function. In this model our x<sub>0</sub> input node is sometimes called the "bias unit." It is always equal to 1. In neural networks, we use the same logistic function as in classification, yet we sometimes call it a sigmoid (logistic) activation function. In this situation, our "theta" parameters are sometimes called "weights".
+
+Our input nodes (layer 1), also known as the "input layer", go into another node (layer 2), which finally outputs the hypothesis function, known as the "output layer".
+
+We can have intermediate layers of nodes between the input and output layers called the "hidden layers."
+
+In this example, we label these intermediate or "hidden" layer nodes a<sub>0</sub><sup>2</sup> ⋯ a<sub>n</sub><sup>2</sup> and call them "activation units."
+
+* a<sub>i</sub><sup>(j)</sup> = "activation" of unit i in layer
+
+* j<sub>0</sub><sup>(j)</sup> = matrix of weights controlling function mapping from layer j to layer j+1
+
+![nn-model](pics/nn/nn-model1.png)
+
+![nn-model](pics/nn/nn-model2.png)
+
+![nn-model](pics/nn/nn-examples1.png)
+![nn-model](pics/nn/nn-examples2.png)
+
+## Multiclass Classification
+
+To classify data into multiple classes, we let our hypothesis function return a vector of values. Say we wanted to classify our data into one of four categories. We will use the following example to see how this classification is done. This algorithm takes as input an image and classifies it accordingly:
+
+![nn-model](pics/nn/nn-multiclass.png)

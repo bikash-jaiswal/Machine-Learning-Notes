@@ -1,3 +1,11 @@
-## Unsupervisd learning
+## Unsupervised learning
 
 **Let's review again what is Unsupervised Learning?**
+In supervised learning our goal was, given a training set, to learn a function *h : X → Y* so that **h(x)** is a “good” predictor for the corresponding value of **y**. For historical reasons, this function h is called a **hypothesis**. But there is no such case in unsupervised learning as training set doesn't have any label with them i.e no Y for X.
+
+![unsupervised](pics/unsupervised/unsupervised.png)
+![unsupervised Examples](pics/unsupervised/unsupervised-examples.png)
+
+In the clustering problem we are given an unlabeled data set and we would like to have an algorithm automatically group the data into coherent subsets or into coherent clusters for us. The K Means algorithm is by far the most popular, by far the most widely used clustering algorithm
+
+## K-Mean Clustering Algorithm
